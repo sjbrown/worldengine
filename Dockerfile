@@ -1,5 +1,6 @@
 FROM debian:stretch
 
+# vim and curl are for debugging
 RUN apt-get update && \
     apt-get -y install git \
     procps \
@@ -14,5 +15,3 @@ WORKDIR /app
 ADD . /app
 
 RUN pip install -r /app/requirements-dev.txt
-
-
